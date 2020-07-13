@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  <style type="text/css">
+  	.main
+  	{
+  		border: 1px solid black;
+  		height: 150px;
+
+  	}
+  	.child_div
+  	{
+  		height: 100px;
+  		border: 1px solid red;
+  		margin-top: 20px;
+  	}
+  	.give_ratings_div
+  	{
+  		height: 100px;
+  		border: 1px solid black;
+  		background-color: peachpuff;
+  		width: 100%;
+  		display: none;
+  		z-index: 1;
+
+  	}
+  </style>
+</head>
+<body>
+	
+	<div class="container main">
+		<div class="row my_row">
+			
+				<div class="col-lg-6">
+					<div class="child_div">
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="child_div p-4">
+						<button type="submit" class="btn btn-success rating_btn">Give Ratings</button>
+
+					</div>
+				
+				</div>
+			
+		</div>
+		<div class="row my_rate_row">
+			<div class="give_ratings_div">
+				<button type="button" class="btn btn-danger sub" style="margin: 20px;">Submit</button>
+			</div>
+		</div>
+
+
+		<!--2----->
+		<div class="row my_row">
+			
+				<div class="col-lg-6">
+					<div class="child_div">
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="child_div p-4">
+						<button type="submit" class="btn btn-success rating_btn" >Give Ratings</button>
+
+					</div>
+				
+				</div>
+			
+		</div>
+
+		<div class="row my_rate_row">
+			<div class="give_ratings_div">
+				<button type="button" class="btn btn-danger sub"  style="margin: 20px;">Submit</button>
+			</div>
+		</div>
+	<!---------------->
+
+	<button type="submit" class="btn btn-success accept_btn">Accept</button>
+	<button type="submit" class="btn btn-danger reject_btn">Reject</button>
+
+	</div>
+
+
+	<div class="container" style="margin-top: 200px;">
+		<div class="form-group">
+			<label>Qty</label>
+			<input type="text" name="" value="" placeholder="" class="form-control my_qty">
+			<br>
+			<button type="submit" class="btn btn-primary" id="qty">Get Qty</button>
+			<h3 id="tq"></h3>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+			var total_qty = 10;
+			console.log(total_qty);
+			$('#tq').text("Total Qty : "+total_qty);
+
+			
+			$(document).on('click', '.rating_btn', function(event) {
+				
+
+				var par = $(this).parents('.my_row');
+				var rate=par.next('.my_rate_row').find('.give_ratings_div').fadeToggle('slow');
+				$('.give_ratings_div').not(rate).hide();
+				
+				
+			});
+
+			$(document).on('click', '.sub', function(event) {
+				
+				var prev_btn=$(this).parents('.my_rate_row');
+				prev_btn.prev('.my_row').find('.rating_btn').prop('disabled', 'true');
+				alert('Ratings Given....!!!!');
+				$('.give_ratings_div').slideUp('slow');
+
+			});
+
+			
+			$('.accept_btn').click(function(event) {
+				/* Act on the event */
+				$(this).text('Accepted');
+				$(this).prop('disabled', 'true');
+				$('.reject_btn').prop('disabled', 'true');
+			});
+
+			$('.reject_btn').click(function(event) {
+				/* Act on the event */
+				$(this).text('Accepted');
+				$(this).prop('disabled', 'true');
+				$('.accept_btn').prop('disabled', 'true');
+			});
+
+			$('#qty').click(function(event) {
+				/* Act on the event */
+				var a= $('.my_qty').val();
+				console.log(a);
+
+				if(a>=total_qty)
+				{
+					alert("your inputed qty is greater so slect less..");
+					$('.my_qty').val(1);
+
+				}
+				else
+				{
+					alert("your inputed qty is ok..!! ");
+				}
+
+			});
+
+
+
+
+			
+
+
+		});
+	</script>
+</body>
+</html>

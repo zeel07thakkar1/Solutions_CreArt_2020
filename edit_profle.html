@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Edit Profile</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  	.main
+  	{
+  		height: auto;
+  		border-radius: 5px;
+  		box-shadow: 1px 1px 5px grey;
+
+  	}
+  	.profile_pic
+  	{
+  		height: 200px;
+  		border: 1px solid grey;
+  		background-image: url('img/2.jpg');
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		position: relative;
+  		cursor: pointer;
+  		
+  	}
+  	.upload_pic
+  	{
+		
+		width: 100%;
+		height: 60px;
+		top: 140px;
+		display: none;
+		position:absolute;
+		cursor: pointer;
+		background-color: gray;
+		opacity: 0.7;
+  	}
+  	label
+  	{
+  		font-weight: bold;
+  	}
+  </style>
+
+</head>
+<body>
+
+	<div class="container main mt-5 mb-5">
+		<h1 class="text-danger pt-3">Edit Profile</h1>
+		<hr>
+	
+		<!--row1--->
+		<h5 class="text-primary">Edit Basic Information</h5>
+		<div class="row p-3">
+			
+			<div class="col-sm-12 col-md-3 col-lg-3">
+				<div class="profile_pic">
+					<img src="" alt="img">
+
+					<div class="upload_pic">
+						<h5 class="text-center pt-2"><a id="my_pic" class="text-white text-decoration-none">Change Photo</a></h5>
+
+						<input type="file" name="" value="" placeholder="">
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-sm-12 col-md-9 col-lg-9">
+				<div class="section1">
+					
+					<form action="" method="get" accept-charset="utf-8">
+						<div class="row form-group">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<label for="">First Name</label>
+								<input type="text" name="" value="Zeel" placeholder="First Name" class="form-control my_input" disabled="">
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<label for="">Last Name</label>
+								<input type="text" name="" value="Thakkar" placeholder="Last Name" class="form-control my_input" disabled="true">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<label for="">Mobile Number</label>
+								<input type="text" name="" value="" placeholder="Mobile" class="form-control my_input" disabled="true">
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<label for="">E-mail</label>
+								<input type="text" name="" value="" placeholder="E-mail" class="form-control my_input"  disabled="true">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		<!--row2--->
+		<h5 class="text-primary">Edit Shipping Information</h5>
+		<div class="row p-3">
+			
+			<div class="col-sm-7 col-md-7 col-lg-7">
+				<textarea name="" rows="7" style="width: 100%" disabled="true" class="my_input" placeholder="Address"></textarea>
+			</div>
+			<div class="col-sm-5 col-md-5 col-lg-5">
+				<div class="section1">
+					
+					<form action="" method="get" accept-charset="utf-8">
+						<div class="form-group">
+							
+								<label for="">Birth Date</label>
+								<input type="text" name="" value="" placeholder="DOB" class="form-control my_input" disabled="true">
+								<br>
+								<label for="">Location</label>
+								<input type="text" name="" value="" placeholder="Location" class="form-control my_input" disabled="true">
+							
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		<!----row3--->
+		
+		<div class="row p-3">
+			
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="section1">
+					<input type="submit" class="btn btn-danger" style="width: 100%;" data-toggle="modal" data-target="#password_modal" value="Change Password">
+				
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="btn1">
+							<input type="submit" id="edit_btn" class="btn btn-info" style="width: 100%;"value="Edit">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<input type="submit" id="save_btn" class="btn btn-success" style="width: 100%;"value="Save">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!----------------password modal ------------------>
+
+<div id="password_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header bg-danger">
+				<h3 class="text-white">Change Password</h3>
+				<button type="button" class="close" data-dismiss="modal"><b class="text-white">&times;</b></button>
+			</div>
+			
+			<div class="modal-body">
+				<form   method="get" accept-charset="utf-8" >
+					
+					<div class="form-group">
+						<label for="">Old Password</label>
+						<input type="text" name="" value="" placeholder="Old Password" required="" class="form-control">
+						<br>
+						<label for="">New Password</label>
+						<input type="text" name="" value="" placeholder="New Password" required="" class="form-control">
+					
+					</div>
+						<div class="modal-footer">
+							<input type="submit" class="btn btn-danger"  value="Submit">
+						</div>
+						
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!------------------------------->
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function($) {
+		$('#edit_btn').click(function(event) {
+			$('.my_input').removeAttr('disabled')
+			alert('Now..! You can Edit Your Details');
+
+		});
+
+		$('#save_btn').click(function(event) {
+			$('.my_input').prop('disabled', 'true');
+			alert('Save Details Successfully...!!');
+			
+		});
+
+		$('.profile_pic').hover(function() {
+			$('.upload_pic').fadeIn('slow');
+		}, function() {
+			/* Stuff to do when the mouse leaves the element */
+			$('.upload_pic').fadeOut('slow');
+		});
+	});
+</script>
+
+</body>
+</html>

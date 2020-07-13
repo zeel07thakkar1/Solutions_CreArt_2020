@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Print Estimate</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style type="text/css" media="screen">
+  	.est_img
+  	{
+  		height: 200px;
+  		width: 100%;
+  		border: 1px solid grey;
+
+  	}
+  </style>
+</head>
+<body>
+	<div class="container">
+		<button type="" id="next_btn" class="btn btn-warning mt-4">Get Estimate</button>
+		
+		<div class="row mt-3 pt-3 my_reciept" style="display: none;">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<div class="estimate" style="overflow-x: auto;">
+					<table class="table table-bordered" style="table-layout: fixed;">
+						
+						<thead class="bg-info text-white font-weight-bold">
+							<tr>
+								<th><h5>Product Estimate Details</h5></th>
+								
+								<th colspan="2"><button type="button" class="btn btn-warning float-left"> <i class="fa fa-arrow-left"></i> Go Back</button>
+								<button type="button" class="btn btn-warning float-right">Continue <i class="fa fa-arrow-right"></i></button>
+								</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="5">
+									<div class="est_img m-auto">
+										<img src="" alt="img">
+									</div>
+								</td>
+								<td><h6>Product Name</h6></td>
+								<td >data</td>
+
+							</tr>
+							<tr>
+								<td><h6>Rent per Month</h6></td>
+								<td>data</td>
+							</tr>
+							<tr>
+								<td><h6>Selected Duration(Months)</h6></td>
+								<td>data</td>
+							</tr>
+							<tr>
+								<td><h6>Quantity</h6></td>
+								<td>data</td>
+							</tr>
+
+							<tr>
+								<td><h6>Deposite</h6></td>
+								<td>data</td>
+								
+							</tr>
+							<tfoot class="bg-dark text-white font-weight-bold">
+							<tr>
+								<td colspan="2" class="text-center"><button type="button" class="btn btn-success float-left">Take Print <i class="fa fa-print"></i></button>
+								<h3>Total Rent</h3>
+								</td>
+
+								<td><h3>data</h3></td>
+								
+							</tr>
+							</tfoot>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-lg-1"></div>
+		</div>
+
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+			$('#next_btn').click(function(event) {
+				/* Act on the event */
+				$('.my_reciept').slideDown(3000);
+			});
+		});
+	</script>
+</body>
+</html>

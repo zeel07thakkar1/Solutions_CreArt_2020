@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<title>Sub Cat</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--font awsome---->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
+
+  <style type="text/css">
+  	.sidebar
+  	{
+  		border: 1px solid grey;
+  		height: 500px;
+  		
+  	}
+  	.side_cat
+  	{
+  		box-shadow: 1px 1px 5px grey;
+  		overflow-y: scroll;
+  		height: 270px;
+  	}
+  	.main
+  	{
+  		border: 1px solid grey;
+  		height: auto;
+  	}
+  	.main_cat
+  	{
+		border-bottom: 1px solid grey;
+		cursor: pointer;
+		padding: 10px;
+	}
+	.result_div
+	{
+		padding: 10px;
+		border-bottom: 1px solid grey;
+		display: none;
+	}
+	.side
+	{
+		box-shadow: 1px 1px 6px grey;
+		height: auto;
+		padding: 8px;
+		margin-bottom: 15px;
+		margin-top: 10px;
+		position: relative;  /* add here */
+	}
+	.img
+	{
+		
+		height: 230px;
+		border: 1px solid #d7d4d4;
+		border-radius: 5px;
+	}
+	.btn_div
+	{
+		width: 100%;
+
+	}
+	.out_stock
+	{
+		width: 100%;
+		height: 45px;
+		position: absolute;
+		bottom: 12px;
+		left: 0px;
+		background-color:#ff8600;
+		padding-top: 9px;
+		display: none;
+
+	}
+	.img1
+	{
+		height: 230px;
+		border: 1px solid #d7d4d4;
+		border-radius: 5px;
+		background-image: url('img/1.jpg');
+		background-size: cover;
+
+
+	}
+	.wish_red
+	{
+		
+		color: red;
+	}
+
+  </style>
+</head>
+<body>
+	<div class="container ">
+		<div class="row mt-5">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div class="sidebar p-3">
+					<h2 class="text-success">Filters <i class="fa fa-filter float-right"></i></h2>
+					<div class="side_cat mt-3">
+						<div class="cat1 main_cat">
+							<h5>Brand <i class="fa fa-chevron-down float-right"></i></h5>
+						</div>
+						<div class="cat1_option result_div">
+							
+
+							<h6><input type="checkbox" name="" value=""> Acer</h6>
+							<h6><input type="checkbox" name="" value=""> Asus</h6>
+							<h6><input type="checkbox" name="" value=""> Dell</h6>
+							<h6><input type="checkbox" name="" value=""> HP</h6>
+							<h6><input type="checkbox" name="" value=""> Lenovo</h6>
+						</div>
+						<!--------------->
+
+						<div class="cat2 main_cat">
+							<h5>Processor <i class="fa fa-chevron-down float-right"></i></h5>
+						</div>
+						<div class="cat2_option result_div">
+							<h6><input type="checkbox" name="" value=""> Processor1</h6>
+							<h6><input type="checkbox" name="" value=""> Processor1</h6>
+							<h6><input type="checkbox" name="" value=""> Processor1</h6>
+							<h6><input type="checkbox" name="" value=""> Processor1</h6>
+							<h6><input type="checkbox" name="" value=""> Processor1</h6>
+						</div>
+						<!--------------->
+
+						<div class="cat3 main_cat">
+							<h5>RAM <i class="fa fa-chevron-down float-right"></i></h5>
+						</div>
+						<div class="cat3_option result_div">
+							<h6><input type="checkbox" name="" value=""> 2 GB</h6>
+							<h6><input type="checkbox" name="" value=""> 4 GB</h6>
+							<h6><input type="checkbox" name="" value=""> 6 GB</h6>
+							<h6><input type="checkbox" name="" value=""> 1 TB</h6>
+							
+						</div>
+						<!--------------->
+
+						<div class="cat4 main_cat">
+							<h5>Storage <i class="fa fa-chevron-down float-right"></i></h5>
+						</div>
+						<div class="cat4_option result_div">
+							<h6><input type="checkbox" name="" value=""> Storage1</h6>
+							<h6><input type="checkbox" name="" value=""> Storage1</h6>
+							<h6><input type="checkbox" name="" value=""> Storage1</h6>
+							<h6><input type="checkbox" name="" value=""> Storage1</h6>
+							<h6><input type="checkbox" name="" value=""> Storage1</h6>
+						</div>
+						<!--------------->
+
+						<div class="cat5 main_cat">
+							<h5>Graphics <i class="fa fa-chevron-down float-right"></i></h5>
+						</div>
+						<div class="cat5_option result_div">
+							<h6><input type="checkbox" name="" value=""> Graphics1</h6>
+							<h6><input type="checkbox" name="" value=""> Graphics1</h6>
+							<h6><input type="checkbox" name="" value=""> Graphics1</h6>
+							<h6><input type="checkbox" name="" value=""> Graphics1</h6>
+							<h6><input type="checkbox" name="" value=""> Graphics1</h6>
+						</div>
+					</div>
+					
+					<!---price range---->
+					<div class="mt-4">
+						<div class="">
+							<h5>Price</h5>
+						</div>
+						<div class="" style="display: visible">
+							
+							<input type="range" class="form-control-range custom-range">
+							<p class="float-left">Rs. 200</p>
+							<p class="float-right">Rs. 5000</p>
+						</div>
+						<!--------------->
+					</div>
+
+
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				<div class="main">
+					<div class="row p-2">
+						<div class="col-sm-6 col-md-6 col-lg-4">
+							<div class="side">
+								<div class="img">
+									<img src="lapy1.png" alt="image" width="100%" height="100%">
+								</div>
+								<div class="name mt-2">
+									<h4>Product Name</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+								</div>
+								<div class="btn_div p-2">
+									<input type="submit" name="" value="Add to Cart" class="btn btn-primary">
+									<i class="fa fa-heart float-right" style="font-size: x-large;"></i>
+
+								</div>
+
+								<div class="out_stock">
+									<h5 class="text-center font-weight-bold text-white">Out Of Stock</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-4">
+							<div class="side">
+								<div class="img">
+									<img src="lapy1.png" alt="image" width="100%" height="100%">
+								</div>
+								<div class="name mt-2">
+									<h4>Product Name</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+								</div>
+								<div class="btn_div p-2">
+									<input type="submit" name="" value="Add to Cart" class="btn btn-primary">
+									<i class="fa fa-heart float-right" style="font-size: x-large;"></i>
+
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-4">
+							<div class="side">
+								<div class="img">
+									<img src="lapy1.png" alt="image" width="100%" height="100%">
+								</div>
+								<div class="name mt-2">
+									<h4>Product Name</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+								</div>
+								<div class="btn_div p-2">
+									<input type="submit" name="" value="Add to Cart" class="btn btn-primary">
+									<i class="fa fa-heart float-right my_heart" style="font-size: x-large;cursor: pointer;"></i>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" onClick="out_of_stock()">Click Me</button>
+		</div>
+	</div>
+	
+          
+
+	<!-- <div class="container mt-3 mb-3">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<div class="img1">
+					
+					<p class="position-absolute p_tag" style="top:0;padding: 20px;text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut.</p>
+					<h1 style="padding: 20px;text-align: justify;">Zeelllllllllllllllllllll</h1>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<div class="img">
+					<img src="img/2.jpg" alt="img" width="100%" height="230px">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<div class="img">
+					<img src="img/images.jpg" alt="img" width="100%" height="230px">
+				</div>
+			</div>
+		</div>
+	</div>
+ -->
+	<script type="text/javascript">
+
+		function out_of_stock()
+			{
+
+				$('.out_stock').show();
+			}
+
+		jQuery(document).ready(function($) {
+
+			$(document).on('click', '.main_cat', function(event) {
+				
+				var next=$(this).next().slideToggle('slow');
+
+				$('.result_div').not(next).slideUp('slow');
+
+
+
+
+			});
+
+			$(document).on('click', '.my_heart', function(event) {
+				$('.my_heart').toggleClass('wish_red');
+				// event.preventDefault();
+			});
+
+			
+	
+		});
+
+
+		
+	</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(this).siblings('selector');
+		});
+	</script>
+</body>
+</html>
